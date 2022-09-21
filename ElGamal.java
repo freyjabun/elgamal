@@ -25,9 +25,7 @@ public class ElGamal {
         System.out.println("Encrypted Message: "+ c);
 
         //Assignment 2
-        
-
-
+        //I know g, p, bobPK, c. Gotta find x hehe
 
     }
 }
