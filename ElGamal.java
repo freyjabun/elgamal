@@ -1,10 +1,10 @@
 
 public class ElGamal {
 
-    static int g = 666; //shared base
-    static int p = 6661; //shared prime
-    static int bobPK = 2227; //gx
-    static int m = 2000;     //m
+    static int g = 666; 
+    static int p = 6661; 
+    static int bobPK = 2227; 
+    static int m = 2000;     
 
 
     public static int sexypow(int x, int y){
@@ -27,9 +27,9 @@ public class ElGamal {
         for(int i = 0; i<y; i++){
             gy = gy * g % p;  
             gxy = gxy * bobPK % p;
-        } //Compute gy & gxy
+        }
 
-        int c = gxy * m; //ciphertext hehe
+        int c = gxy * m;
 
  
 
@@ -50,7 +50,6 @@ public class ElGamal {
             }
         }
         int decrypt = c / sexypow(gy, eveY);
-        // if (sexypow(g, 66) == bobPK) System.out.println("stort\n");
         System.out.println("Bob's private key is: " + eveY + "\n");
         System.out.println("The decrypted message is " + "\"" + decrypt + "\"\n");
 
