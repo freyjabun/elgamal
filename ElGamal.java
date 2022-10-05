@@ -34,10 +34,10 @@ public class ElGamal {
  
 
         //Encrypted message
-        System.out.println("Encrypted Message: "+ gy + " " + c + "\n");
+        System.out.printf("Encrypted Message: %d %d \n\n", gy, c);
 
         int decryptTest = c / gxy;
-        System.out.println("Decrypted message for testing purposes: " + decryptTest + "\n");
+        System.out.printf("Decrypted message for testing purposes: %d\n\n", decryptTest);
         
 
         //Assignment 2
@@ -50,8 +50,8 @@ public class ElGamal {
             }
         }
         int decrypt = c / sexypow(gy, eveY);
-        System.out.println("Bob's private key is: " + eveY + "\n");
-        System.out.println("The decrypted message is " + "\"" + decrypt + "\"\n");
+        System.out.printf("Bob's private key is: %d\n\n", eveY);
+        System.out.printf("The decrypted message is \"%d\"\n\n", decrypt);
 
         //Assignment 3
         System.out.println("Assignment 3\n");
@@ -59,6 +59,6 @@ public class ElGamal {
         int decrypt2 = mallory / sexypow(gy, eveY);
         //above is for the purpose of showing that Bob would decrypt the message
         //to be 6000, mallory does not know the private key in this case.
-        System.out.println("Bob's decrypted message " + "\"" + decrypt2 + "\"" + "\n");
+        System.out.printf("Bob's decrypted message is: \"%d\"\n\n", decrypt2);
     }
 }
